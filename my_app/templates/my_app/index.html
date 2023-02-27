@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <h1>This is Index Page</h1>
+    {% for obj in objects %}
+   <ul>
+    <li> {{obj.name}} and  {{obj.year}}</li>
+    
+   </ul>
+    {% endfor%}
+{% endblock content %}

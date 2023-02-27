@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <h1>This is Add Page</h1>
+
+    <form action="" method="post">
+        {%csrf_token%}
+        <div class="mb-3">
+          <label for="Brand" class="form-label">Brand</label>
+          <input type="text" class="form-control" id="name" name="name">
+        
+        </div>
+        <div class="mb-3">
+          <label for="year" class="form-label">Year</label>
+          <input type="number" class="form-control" id="year" name="year">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+{% endblock content %}
