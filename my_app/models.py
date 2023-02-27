@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator,MaxValueValidator
 class Review(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    stars = models.IntegerField()
+    stars = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
 
 class Car(models.Model):

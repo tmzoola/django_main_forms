@@ -7,7 +7,16 @@
 
     <form action="" method="post">
         {%csrf_token%}
-        {{form}}
+        {% for field in form %}
+        <div class="mb-3">
+            {{field.label_tag}}
+        </div>
+        
+        {{field}}
+        {{field.errors}}
+        
+        {% endfor %}
         <input type="submit">
+
     </form>
 {% endblock content %}

@@ -11,4 +11,10 @@ from django.forms import ModelForm
 class Review(ModelForm):
     class Meta:
         model = Review
-        fields = ['first_name','last_name','stars']
+        fields ="__all__"
+
+        labels = {
+            'first_name':"First_name",
+            'last_name':"Last Name",
+            'stars':"Rating"
+        }
